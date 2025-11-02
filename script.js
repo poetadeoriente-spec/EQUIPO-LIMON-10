@@ -106,9 +106,9 @@ function bloquearJuego(bloquear = true) {
 }
 
 function actualizarMarcador() {
-    document.getElementById('player1').innerHTML = `JUGADOR 1: ⭐ <span>${puntos[0]}</span>`;
-    document.getElementById('player2').innerHTML = `JUGADOR 2: ⭐ <span>${puntos[1]}</span>`;
-    document.getElementById('turno').textContent = `TURNO: JUGADOR ${jugadorActual}`;
+    document.getElementById('player1').innerHTML = "JUGADOR 1: ⭐ <span>" + puntos[0] + "</span>";
+    document.getElementById('player2').innerHTML = "JUGADOR 2: ⭐ <span>" + puntos[1] + "</span>";
+    document.getElementById('turno').textContent = "TURNO: JUGADOR " + jugadorActual;
     
     document.getElementById('player1').classList.toggle('active', jugadorActual === 1);
     document.getElementById('player2').classList.toggle('active', jugadorActual === 2);
@@ -121,7 +121,7 @@ function verificarFinJuego() {
             if (ganador === 0) {
                 alert('¡EMPATE! 🎉\n\nDesarrollado por Equipo Limón 🍋');
             } else {
-                alert(`¡JUGADOR ${ganador} GANA! 🏆\n\nDesarrollado por Equipo Limón 🍋');
+                alert('¡JUGADOR ' + ganador + ' GANA! 🏆\n\nDesarrollado por Equipo Limón 🍋');
             }
         }, 500);
     }
